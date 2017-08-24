@@ -6,7 +6,11 @@
 
 <ion-content padding>
   <h2>Welcome to Ionic!</h2>
-  <h2 ion-text color="primary">hot code终于可以了我了个去</h2>
+  <h2>外壳更新提示？</h2>
+  <ion-spinner name="bubbles"></ion-spinner>
+  <!--  -->
+  <h2 ion-text color="primary" [ngClass]="{berlin:isChanged}">愿得一人心，白首不分离</h2>
+  <h2 ion-text color="primary" [class.berlin]="isChanged">愿得一人心，白首不分离</h2>
   <p>
     This starter project comes with simple tabs-based layout for apps
     that are going to primarily use a Tabbed UI.
