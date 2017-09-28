@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <style>
+        div {
+            height: 150px;
+            width: 500px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <h1 id="todo" draggable="true" ondragstart="dragstart(event)">把我拖到上面框里面吧</h1>
+    <script>
+        function dragstart(event) {
+            event.dataTransfer.setData("h11",event.target.id)
+        }
+        function allowDrop(event){
+            event.preventDefault()
+        }
+        function drop(event){
+           /*  var data=event.dataTransfer.getData('h11');
+            event.preventDefault();
+            event.target.appendChild(document.getElementById(data)) */
+            event.preventDefault();
+         
+            
+            console.log(event.dataTransfer.files[0])
+        }
+    </script>
+</body>
+
+</html>
